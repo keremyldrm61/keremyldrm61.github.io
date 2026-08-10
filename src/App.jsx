@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { TechGridPattern } from "./components/TechGridPattern/TechGridPattern";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import Certificate from "./components/Certificate/Certificate";
 
 const App = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const App = () => {
       </div>
       <div className="relative z-10">
         <Hero />
+        <Certificate />
       </div>
     </div>
   );
