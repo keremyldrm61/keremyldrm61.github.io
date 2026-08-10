@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { TechGridPattern } from "./components/TechGridPattern/TechGridPattern";
+import Header from "./components/Header/Header";
 
 const App = () => {
   useEffect(() => {
@@ -12,14 +13,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen bg-neutral-950 text-neutral-200 overflow-hidden">
+    <div className="relative w-full min-h-screen bg-neutral-50 text-neutral-900 transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-200 overflow-hidden">
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <TechGridPattern
-          color="rgba(255, 255, 255, 0.04)"
-          backgroundColor="transparent"
-        />
+        <TechGridPattern />
       </div>
-      <div className="relative z-10"></div>
+      <div className="relative z-10">
+        <Header />
+      </div>
     </div>
   );
 };
