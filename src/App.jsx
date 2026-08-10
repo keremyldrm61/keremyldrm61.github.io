@@ -5,6 +5,7 @@ import { TechGridPattern } from "./components/TechGridPattern/TechGridPattern";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Certificate from "./components/Certificate/Certificate";
+import Skills from "./components/Skills/Skills";
 
 const App = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const App = () => {
       <div className="relative z-10">
         <Hero />
         <Certificate />
+        <Skills />
       </div>
     </div>
   );
