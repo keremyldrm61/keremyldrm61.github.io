@@ -52,7 +52,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-8 md:px-16 py-24 relative z-10">
+    <div
+      id="contact"
+      className="w-full max-w-7xl mx-auto px-8 md:px-16 py-24 relative z-10"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* Sol Taraf - Bilgiler */}
         <div className="lg:col-span-5 space-y-6" data-aos="fade-right">
@@ -164,7 +167,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="px-6 py-3 bg-neutral-900 dark:bg-neutral-100 hover:bg-black dark:hover:bg-white text-white dark:text-neutral-950 text-sm font-medium rounded-xl transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group disabled:opacity-70 disabled:cursor-not-allowed max-w-50"
+                className="px-6 py-3 bg-neutral-900 dark:bg-neutral-100 hover:bg-black dark:hover:bg-white text-white dark:text-neutral-950 text-sm font-medium rounded-xl transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed max-w-50"
               >
                 {status === "loading" ? (
                   <>

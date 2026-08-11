@@ -87,9 +87,12 @@ const projectsData = [
   },
 ];
 
-const Project = () => {
+const Projects = () => {
   return (
-    <section className="w-full max-w-7xl mx-auto px-8 md:px-16 py-24 relative z-10">
+    <section
+      id="projects"
+      className="w-full max-w-7xl mx-auto px-8 md:px-16 py-24 relative z-10"
+    >
       {/* Başlık Alanı */}
       <div className="mb-16 md:mb-24" data-aos="fade-up">
         <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
@@ -208,4 +211,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;

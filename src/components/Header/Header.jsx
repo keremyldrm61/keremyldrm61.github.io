@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, Palette, Sun, Moon, X } from "lucide-react";
 
 const Header = () => {
@@ -34,11 +34,13 @@ const Header = () => {
     setIsDark((prev) => !prev);
   };
 
+  // Yeni eklediğimiz PROJECTS bileşeni stratejik sıraya göre eklendi
   const navLinks = [
     { name: "HOME", href: "#home" },
     { name: "ABOUT", href: "#about" },
-    { name: "CERTIFICATE", href: "#certificate" },
     { name: "SKILLS", href: "#skills" },
+    { name: "PROJECTS", href: "#projects" },
+    { name: "CERTIFICATES", href: "#certificates" },
     { name: "CONTACT", href: "#contact" },
   ];
 
@@ -54,7 +56,7 @@ const Header = () => {
             <a
               key={link.name}
               href={link.href}
-              className="relative group text-neutral-800 hover:text-black transition-colors dark:text-white/90 dark:hover:text-white"
+              className="relative group text-neutral-800 hover:text-black transition-colors dark:text-white/90 dark:hover:text-white cursor-pointer"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neutral-900 transition-all duration-300 group-hover:w-full dark:bg-white"></span>
@@ -63,20 +65,20 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
-          {/* Tema Değiştirme Butonu */}
+          {/* Tema Değiştirme Butonu (cursor-pointer eklendi) */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
             title={isDark ? "Switch to Light Theme" : "Switch to Dark Theme"}
-            className="flex items-center gap-2 p-2 rounded-full text-neutral-700 hover:text-black hover:bg-neutral-200/60 transition-all duration-300 hover:scale-105 active:scale-95 dark:text-white/80 dark:hover:text-white dark:hover:bg-white/10"
+            className="flex items-center gap-2 p-2 rounded-full text-neutral-700 hover:text-black hover:bg-neutral-200/60 transition-all duration-300 hover:scale-105 active:scale-95 dark:text-white/80 dark:hover:text-white dark:hover:bg-white/10 cursor-pointer"
           >
             <Palette size={20} />
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
-          {/* Mobil Menü Butonu */}
+          {/* Mobil Menü Butonu (cursor-pointer eklendi) */}
           <button
-            className="md:hidden p-2 text-neutral-800 hover:text-black transition-all duration-300 hover:scale-110 dark:text-white/80 dark:hover:text-white"
+            className="md:hidden p-2 text-neutral-800 hover:text-black transition-all duration-300 hover:scale-110 dark:text-white/80 dark:hover:text-white cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >
@@ -92,7 +94,7 @@ const Header = () => {
         }`}
       >
         <div
-          className="absolute inset-0 bg-black/40 backdrop-blur-sm dark:bg-black/60"
+          className="absolute inset-0 bg-black/40 backdrop-blur-sm dark:bg-black/60 cursor-pointer"
           onClick={() => setIsMenuOpen(false)}
         ></div>
         <div
@@ -105,7 +107,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-semibold text-neutral-800 hover:text-black tracking-widest relative group dark:text-white/90 dark:hover:text-white"
+                className="text-sm font-semibold text-neutral-800 hover:text-black tracking-widest relative group dark:text-white/90 dark:hover:text-white cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}

@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { TechGridPattern } from "./components/TechGridPattern/TechGridPattern";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Certificate from "./components/Certificate/Certificate";
+import Certificates from "./components/Certificates/Certificates";
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import Project from "./components/Project/Project";
+import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
@@ -26,10 +26,10 @@ const App = () => {
       </div>
       <div className="relative z-10">
         <Hero />
-        <Skills />
-        <Project />
-        <Certificate />
         <About />
+        <Skills />
+        <Projects />
+        <Certificates />
         <Contact />
         <Footer />
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Skills = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -40,7 +40,10 @@ const Skills = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-8 md:px-16 py-20 relative z-10">
+    <div
+      id="skills"
+      className="w-full max-w-5xl mx-auto px-8 md:px-16 py-20 relative z-10"
+    >
       <div className="mb-16" data-aos="fade-up">
         <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
           My Experience

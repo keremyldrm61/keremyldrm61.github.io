@@ -1,10 +1,8 @@
-import React from "react";
-
-const Certificate = () => {
+const Certificates = () => {
   const certificates = [
     {
       id: 1,
-      title: "FULLSTACK DEVELOPER",
+      title: "FULL-STACK DEVELOPER",
       issuer: "GoIT",
       date: 2026,
       desc: "Successfully completed an intensive Full-Stack Developer program at GoIT, encompassing over 675 hours of theoretical lectures, hands-on applications, and 4 comprehensive team projects. The curriculum covers end-to-end modern software development workflows, including responsive interface development aligned with modern web standards, asynchronous JavaScript architectures, React & Redux state management, Express and MongoDB-based REST API design, Swagger documentation, and TypeScript integration.",
@@ -41,7 +39,10 @@ const Certificate = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-8 md:px-16 py-20 relative block mb-2">
+    <div
+      id="certificates"
+      className="w-full max-w-7xl mx-auto px-8 md:px-16 py-20 relative block mb-2"
+    >
       <div className="text-center mb-16" data-aos="fade-up">
         <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
           Achieved Milestones
@@ -98,4 +99,4 @@ const Certificate = () => {
   );
 };
 
-export default Certificate;
+export default Certificates;

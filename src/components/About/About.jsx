@@ -1,5 +1,3 @@
-import React from "react";
-
 const About = () => {
   const stats = [
     { number: "2+", label: "Years Experience" },
@@ -9,7 +7,10 @@ const About = () => {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-8 md:px-16 py-24 relative z-10">
+    <div
+      id="about"
+      className="w-full max-w-7xl mx-auto px-8 md:px-16 py-24 relative z-10"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         <div className="lg:col-span-4 sticky top-24" data-aos="fade-right">
           <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">

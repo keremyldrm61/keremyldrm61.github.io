@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -40,7 +38,7 @@ const Footer = () => {
               LinkedIn
             </a>
             <a
-              href="#"
+              href="#contact"
               className="hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
             >
               Contact

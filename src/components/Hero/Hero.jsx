@@ -1,4 +1,4 @@
-import React, {
+import {
   lazy,
   Suspense,
   useCallback,
@@ -80,7 +80,10 @@ const Spotlight = ({
 
 const Hero = () => {
   return (
-    <div className="relative w-full min-h-screen text-neutral-900 dark:text-neutral-200 overflow-hidden flex items-center p-8 md:p-16 bg-transparent">
+    <div
+      id="home"
+      className="relative w-full min-h-screen text-neutral-900 dark:text-neutral-200 overflow-hidden flex items-center p-8 md:p-16 bg-transparent"
+    >
       <Spotlight size={350} />
       <Header />
 
@@ -88,7 +91,7 @@ const Hero = () => {
         <div className="lg:col-span-5 flex flex-col space-y-6">
           <div className="space-y-2">
             <span className="text-xs font-medium tracking-widest text-neutral-500 dark:text-neutral-500 uppercase">
-              FullStack Developer
+              Full-Stack Developer
             </span>
             <h1 className="text-4xl md:text-5xl font-light tracking-tight text-neutral-800 dark:text-neutral-100 leading-tight transition-colors duration-300">
               Hi, I'm{" "}
@@ -105,7 +108,14 @@ const Hero = () => {
             end-to-end, responsive, and high-performance web applications.
           </p>
           <div className="pt-2">
-            <button className="px-5 py-2 bg-neutral-900 hover:bg-neutral-800 text-white dark:text-neutral-200 text-sm font-medium rounded-full border border-neutral-900 dark:border-neutral-800 transition-all duration-200 shadow-sm relative z-20">
+            <button
+              onClick={() => {
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="px-5 py-2 bg-neutral-900 hover:bg-neutral-800 text-white dark:text-neutral-200 text-sm font-medium rounded-full border border-neutral-900 dark:border-neutral-800 transition-all duration-200 shadow-sm relative z-20 cursor-pointer"
+            >
               Contact Me
             </button>
           </div>
