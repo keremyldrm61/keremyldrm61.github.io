@@ -9,6 +9,7 @@ import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Project from "./components/Project/Project";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const App = () => {
         <Certificate />
         <About />
         <Contact />
+        <Footer />
       </div>
     </div>
   );
