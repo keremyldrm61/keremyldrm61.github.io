@@ -8,6 +8,7 @@ import Certificate from "./components/Certificate/Certificate";
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
+import Project from "./components/Project/Project";
 
 const App = () => {
   useEffect(() => {
@@ -24,8 +25,9 @@ const App = () => {
       </div>
       <div className="relative z-10">
         <Hero />
-        <Certificate />
         <Skills />
+        <Project />
+        <Certificate />
         <About />
         <Contact />
       </div>
