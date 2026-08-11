@@ -7,6 +7,7 @@ import Hero from "./components/Hero/Hero";
 import Certificate from "./components/Certificate/Certificate";
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 
 const App = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
         <Certificate />
         <Skills />
         <About />
+        <Contact />
       </div>
     </div>
   );
