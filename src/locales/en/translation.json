@@ -7,6 +7,12 @@
       "projects": "PROJECTS",
       "certificates": "CERTIFICATES",
       "contact": "CONTACT"
+    },
+    "switcher": {
+      "toTurkish": "Switch to Turkish",
+      "toEnglish": "Switch to English",
+      "toLight": "Switch to Light Theme",
+      "toDark": "Switch to Dark Theme"
     }
   },
   "hero": {

@@ -10,7 +10,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) setIsMenuOpen(false);
+      if (window.innerWidth >= 1024) setIsMenuOpen(false);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -27,14 +27,14 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-5 md:px-12 bg-white/70 text-neutral-900 border-b border-black/10 backdrop-blur-md transition-colors duration-300 dark:bg-black/20 dark:text-white dark:border-white/10">
+      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-5 lg:px-12 bg-white/70 text-neutral-900 border-b border-black/10 backdrop-blur-md transition-colors duration-300 dark:bg-black/20 dark:text-white dark:border-white/10">
         <div className="flex items-center gap-2 text-xl font-bold tracking-wider">
           <a href="#home" className="select-none cursor-pointer">
             <span>Kerem Yıldırım</span>
           </a>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest">
+        <nav className="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-widest">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -47,14 +47,14 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3 md:gap-5">
+        <div className="flex items-center gap-3 lg:gap-5">
           {/* İzole ettiğimiz Aksiyon Bileşenleri (Dil ve Tema) */}
           <LanguageSwitcher />
           <ThemeSwitcher />
 
           {/* Mobil Menü Butonu */}
           <button
-            className="md:hidden p-2 text-neutral-800 hover:text-black transition-all duration-300 hover:scale-110 dark:text-white/80 dark:hover:text-white cursor-pointer"
+            className="lg:hidden p-2 text-neutral-800 hover:text-black transition-all duration-300 hover:scale-110 dark:text-white/80 dark:hover:text-white cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Menu"
           >

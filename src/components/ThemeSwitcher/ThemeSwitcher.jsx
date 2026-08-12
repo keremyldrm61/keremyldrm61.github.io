@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Palette, Sun, Moon } from "lucide-react";
 
 const ThemeSwitcher = () => {
+  const { t } = useTranslation();
+
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
       const savedTheme = localStorage.getItem("theme");
@@ -29,7 +32,9 @@ const ThemeSwitcher = () => {
     <button
       onClick={toggleTheme}
       aria-label="Toggle Theme"
-      title={isDark ? "Switch to Light Theme" : "Switch to Dark Theme"}
+      title={
+        isDark ? t("header.switcher.toLight") : t("header.switcher.toDark")
+      }
       className="flex items-center gap-2 p-2 rounded-full text-neutral-700 hover:text-black hover:bg-neutral-200/60 transition-all duration-300 hover:scale-105 active:scale-95 dark:text-white/80 dark:hover:text-white dark:hover:bg-white/10 cursor-pointer"
     >
       <Palette size={20} />

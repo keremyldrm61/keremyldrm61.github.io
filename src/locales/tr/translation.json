@@ -7,6 +7,12 @@
       "projects": "PROJELER",
       "certificates": "SERTİFİKALAR",
       "contact": "İLETİŞİM"
+    },
+    "switcher": {
+      "toTurkish": "Türkçe'ye Geç",
+      "toEnglish": "İngilizce'ye Geç",
+      "toLight": "Açık Temaya Geç",
+      "toDark": "Koyu Temaya Geç"
     }
   },
   "hero": {

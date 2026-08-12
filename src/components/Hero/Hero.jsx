@@ -54,6 +54,7 @@ const Hero = () => {
             <Spline
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full object-cover"
+              renderOnDemand={true}
             />
           </Suspense>
         </div>
