@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import focusFrameImage from "../../assets/images/focus-frame.webp";
 import cinemaniaImage from "../../assets/images/cinemania.webp";
 import moneyGuardImage from "../../assets/images/money-guard.webp";
@@ -7,87 +7,82 @@ import travelTrucksImage from "../../assets/images/travel-trucks.webp";
 import psychologistsServicesImage from "../../assets/images/psychologists-services.webp";
 import petloveImage from "../../assets/images/petlove.webp";
 
-const projectsData = [
-  {
-    id: 1,
-    title: "Focus Frame",
-    description:
-      "A modern photography portfolio designed to showcase visual work, featuring a minimalist aesthetic and a responsive layout, built entirely with HTML and CSS.",
-    techStack: ["HTML", "CSS"],
-    role: "Frontend Developer",
-    githubLink: "https://github.com/Focus-Frame-2-0/goit-focusframe-2",
-    liveLink: "https://focus-frame-2-0.github.io/goit-focusframe-2/",
-    image: focusFrameImage,
-  },
-  {
-    id: 2,
-    title: "Cinemania",
-    description:
-      "A dynamic platform powered by TMDB API integration, enabling users to discover the latest movies. It features advanced search, year-based filtering, and personalized library management capabilities.",
-    techStack: ["HTML", "CSS", "JavaScript", "TMDB API"],
-    role: "Frontend Developer",
-    githubLink: "https://github.com/january-javaScript-project/cinemania",
-    liveLink: "https://january-javascript-project.github.io/cinemania/",
-    image: cinemaniaImage,
-  },
-  {
-    id: 3,
-    title: "Money Guard",
-    description:
-      "A financial management application that enables users to analyze their expenses through visual charts and category-based data. It features secure token-based session management and robust form validation.",
-    techStack: ["React", "Redux Toolkit", "Formik", "REST API"],
-    role: "Scrum Master & Developer",
-    githubLink: "https://github.com/goit-react-project/money-guard",
-    liveLink: "https://goit-react-money-guard.vercel.app/",
-    image: moneyGuardImage,
-  },
-  {
-    id: 4,
-    title: "Slim Moms",
-    description:
-      "A full-stack application that calculates daily calorie requirements based on individual goals and supports diet tracking. As the team lead, I managed the project infrastructure, task allocation, and frontend-backend integration.",
-    techStack: ["React", "Node.js", "MongoDB", "Swagger"],
-    role: "Team Lead & Full-Stack Developer",
-    githubLink: "https://github.com/slim-moms-project/slim-moms",
-    liveLink: "https://slim-moms-nine.vercel.app/",
-    image: slimMomsImage,
-  },
-  {
-    id: 5,
-    title: "Travel Trucks",
-    description:
-      "A campervan rental platform featuring comprehensive filtering, favorites management, and seamless booking workflows. REST API integration was implemented using Axios and MockAPI, with the global state optimized for improved performance and maintainability.",
-    techStack: ["React", "Vite", "Redux", "Axios"],
-    role: "Frontend Developer",
-    githubLink: "https://github.com/keremyldrm61/travel-trucks",
-    liveLink: "https://travel-trucks-steel-ten.vercel.app/",
-    image: travelTrucksImage,
-  },
-  {
-    id: 6,
-    title: "Psychologists Services",
-    description:
-      "A Firebase-powered appointment booking system that allows users to filter experienced psychologists based on their areas of expertise and consultation fees. The application features dynamic theme options and is built with TypeScript to ensure type safety.",
-    techStack: ["React", "TypeScript", "Firebase", "Custom Hooks"],
-    role: "Full-Stack Developer",
-    githubLink: "https://github.com/keremyldrm61/psychologists-services",
-    liveLink: "https://psychologists-services-dusky.vercel.app/",
-    image: psychologistsServicesImage,
-  },
-  {
-    id: 7,
-    title: "Petlove",
-    description:
-      "A pet adoption platform that enables users to securely create and manage listings through JWT-based authentication and Cloudinary REST API integration. Asynchronous data flow is efficiently managed using Redux Toolkit.",
-    techStack: ["React", "TypeScript", "Redux Toolkit", "Cloudinary API"],
-    role: "Full-Stack Developer",
-    githubLink: "https://github.com/keremyldrm61/petlove",
-    liveLink: "https://petlove-drab.vercel.app/",
-    image: petloveImage,
-  },
-];
-
 const Projects = () => {
+  const { t } = useTranslation();
+
+  const projectsData = [
+    {
+      id: 1,
+      title: "Focus Frame",
+      description: t("projects.items.focusFrame.desc"),
+      techStack: ["HTML", "CSS"],
+      role: t("projects.items.focusFrame.role"),
+      githubLink: "https://github.com/Focus-Frame-2-0/goit-focusframe-2",
+      liveLink: "https://focus-frame-2-0.github.io/goit-focusframe-2/",
+      image: focusFrameImage,
+    },
+    {
+      id: 2,
+      title: "Cinemania",
+      description: t("projects.items.cinemania.desc"),
+      techStack: ["HTML", "CSS", "JavaScript", "TMDB API"],
+      role: t("projects.items.cinemania.role"),
+      githubLink: "https://github.com/january-javaScript-project/cinemania",
+      liveLink: "https://january-javascript-project.github.io/cinemania/",
+      image: cinemaniaImage,
+    },
+    {
+      id: 3,
+      title: "Money Guard",
+      description: t("projects.items.moneyGuard.desc"),
+      techStack: ["React", "Redux Toolkit", "Formik", "REST API"],
+      role: t("projects.items.moneyGuard.role"),
+      githubLink: "https://github.com/goit-react-project/money-guard",
+      liveLink: "https://goit-react-money-guard.vercel.app/",
+      image: moneyGuardImage,
+    },
+    {
+      id: 4,
+      title: "Slim Moms",
+      description: t("projects.items.slimMoms.desc"),
+      techStack: ["React", "Node.js", "MongoDB", "Swagger"],
+      role: t("projects.items.slimMoms.role"),
+      githubLink: "https://github.com/slim-moms-project/slim-moms",
+      liveLink: "https://slim-moms-nine.vercel.app/",
+      image: slimMomsImage,
+    },
+    {
+      id: 5,
+      title: "Travel Trucks",
+      description: t("projects.items.travelTrucks.desc"),
+      techStack: ["React", "Vite", "Redux", "Axios"],
+      role: t("projects.items.travelTrucks.role"),
+      githubLink: "https://github.com/keremyldrm61/travel-trucks",
+      liveLink: "https://travel-trucks-steel-ten.vercel.app/",
+      image: travelTrucksImage,
+    },
+    {
+      id: 6,
+      title: "Psychologists Services",
+      description: t("projects.items.psychologists.desc"),
+      techStack: ["React", "TypeScript", "Firebase", "Custom Hooks"],
+      role: t("projects.items.psychologists.role"),
+      githubLink: "https://github.com/keremyldrm61/psychologists-services",
+      liveLink: "https://psychologists-services-dusky.vercel.app/",
+      image: psychologistsServicesImage,
+    },
+    {
+      id: 7,
+      title: "Petlove",
+      description: t("projects.items.petlove.desc"),
+      techStack: ["React", "TypeScript", "Redux Toolkit", "Cloudinary API"],
+      role: t("projects.items.petlove.role"),
+      githubLink: "https://github.com/keremyldrm61/petlove",
+      liveLink: "https://petlove-drab.vercel.app/",
+      image: petloveImage,
+    },
+  ];
+
   return (
     <section
       id="projects"
@@ -96,12 +91,12 @@ const Projects = () => {
       {/* Başlık Alanı */}
       <div className="mb-16 md:mb-24" data-aos="fade-up">
         <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
-          My Projects
+          {t("projects.subtitle")}
         </span>
         <h2 className="text-4xl md:text-5xl font-light text-neutral-900 dark:text-neutral-100 leading-tight transition-colors duration-300">
-          Featured <br />
+          {t("projects.titleMain")} <br />
           <span className="font-medium text-neutral-950 dark:text-white transition-colors duration-300">
-            Projects
+            {t("projects.titleHighlight")}
           </span>
         </h2>
       </div>

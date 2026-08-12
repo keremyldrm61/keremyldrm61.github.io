@@ -1,0 +1,137 @@
+{
+  "header": {
+    "nav": {
+      "home": "ANA SAYFA",
+      "about": "HAKKIMDA",
+      "skills": "YETENEKLER",
+      "projects": "PROJELER",
+      "certificates": "SERTİFİKALAR",
+      "contact": "İLETİŞİM"
+    }
+  },
+  "hero": {
+    "role": "FULL-STACK GELİŞTİRİCİ",
+    "greeting": "Merhaba, Ben",
+    "description": "Takım projelerinde Takım Lideri ve Scrum Master olarak pratik deneyime sahip, hem full-stack hem de frontend geliştirmeye odaklanan bir Full-Stack Geliştiriciyim. HTML5, CSS3, JavaScript, React, Node.js, MongoDB ve TypeScript kullanarak uçtan uca, duyarlı ve yüksek performanslı web uygulamaları geliştiriyorum.",
+    "contactBtn": "İletişime Geç"
+  },
+  "about": {
+    "subtitle": "Ben Kimim",
+    "titleMain": "Hakkımda",
+    "titleSub": "Yolculuğum",
+    "p1_start": "Modern ve yüksek performanslı web uygulamaları geliştirmeye adanmış tutkulu bir Full-Stack Web Geliştiricisiyim. Yazılım geliştirmedeki yolculuğum, karmaşık sorunları sezgisel ve kullanıcı odaklı dijital deneyimlere dönüştürme konusundaki sürekli arzumla şekilleniyor.",
+    "p1_bold": "Ölçeklenebilir arka uç (backend) mimarilerinden",
+    "p1_end": "mükemmel piksel hassasiyetine sahip ön yüzlere (frontend) kadar uçtan uca eksiksiz çözümler üretmekten keyif alıyorum.",
+    "p2": "GoIT'deki yoğun Full-Stack Geliştirici programını başarıyla tamamlayarak React, JavaScript ve TypeScript gibi teknolojilerde güçlü bir uzmanlık kazandım. İster işbirlikçi çevik (agile) ortamlarda Scrum Master olarak görev alayım, ister tek başıma sağlam uygulamalar dağıtayım; temel odak noktam her zaman temiz, bakımı kolay kod yazmak ve etkili sonuçlar sunmaktır.",
+    "stats": {
+      "exp": "Yıllık Deneyim",
+      "projects": "Tamamlanan Proje",
+      "certs": "Kazanılan Sertifika",
+      "commits": "GitHub Commit'i"
+    }
+  },
+  "skills": {
+    "subtitle": "Deneyimlerim",
+    "titleMain": "Yetenekler & ",
+    "titleHighlight": "Teknolojiler",
+    "categories": {
+      "frontend": {
+        "title": "Ön Yüz (Frontend) Geliştirme",
+        "subtitle": "Duyarlı, yüksek performanslı ve kullanıcı odaklı arayüzler geliştirme."
+      },
+      "backend": {
+        "title": "Arka Yüz (Backend) & Veritabanı",
+        "subtitle": "Ölçeklenebilir sunucu tarafı mimarileri ve güvenli REST API'ler geliştirme."
+      },
+      "tools": {
+        "title": "Araçlar & DevOps",
+        "subtitle": "Versiyon kontrolü, iş akışı yönetimi ve modern araçların kullanımı.",
+        "teamLead": "Scrum / Çevik (Agile) / Takım Lideri"
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "Projelerim",
+    "titleMain": "Öne Çıkan ",
+    "titleHighlight": "Projeler",
+    "items": {
+      "focusFrame": {
+        "role": "Frontend Geliştirici",
+        "desc": "Tamamen HTML ve CSS ile oluşturulmuş, minimalist bir estetiğe ve duyarlı tasarıma sahip, görsel çalışmaları sergilemek üzere tasarlanmış modern bir fotoğrafçılık portföyü."
+      },
+      "cinemania": {
+        "role": "Frontend Geliştirici",
+        "desc": "Kullanıcıların en yeni filmleri keşfetmesini sağlayan TMDB API entegrasyonu ile desteklenen dinamik bir platform. Gelişmiş arama, yıla göre filtreleme ve kişiselleştirilmiş kütüphane yönetimi özelliklerine sahiptir."
+      },
+      "moneyGuard": {
+        "role": "Scrum Master & Geliştirici",
+        "desc": "Kullanıcıların harcamalarını görsel grafikler ve kategori tabanlı veriler aracılığıyla analiz etmelerini sağlayan finansal yönetim uygulaması. Güvenli token tabanlı oturum yönetimi ve güçlü form doğrulama özellikleri içerir."
+      },
+      "slimMoms": {
+        "role": "Takım Lideri & Full-Stack Geliştirici",
+        "desc": "Bireysel hedeflere göre günlük kalori ihtiyacını hesaplayan ve diyet takibini destekleyen full-stack uygulama. Takım lideri olarak proje altyapısını, görev dağılımını ve frontend-backend entegrasyonunu yönettim."
+      },
+      "travelTrucks": {
+        "role": "Frontend Geliştirici",
+        "desc": "Kapsamlı filtreleme, favori yönetimi ve kesintisiz rezervasyon iş akışlarına sahip bir karavan kiralama platformu. Axios ve MockAPI kullanılarak REST API entegrasyonu sağlandı ve global durum (state) yönetimi performans için optimize edildi."
+      },
+      "psychologists": {
+        "role": "Full-Stack Geliştirici",
+        "desc": "Kullanıcıların uzmanlık alanlarına ve danışmanlık ücretlerine göre deneyimli psikologları filtrelemesine olanak tanıyan, Firebase destekli bir randevu rezervasyon sistemi. Dinamik tema seçenekleri sunar ve tip güvenliğini sağlamak için TypeScript ile geliştirilmiştir."
+      },
+      "petlove": {
+        "role": "Full-Stack Geliştirici",
+        "desc": "Kullanıcıların JWT tabanlı kimlik doğrulama ve Cloudinary REST API entegrasyonu ile güvenli bir şekilde ilan oluşturmasına ve yönetmesine olanak tanıyan evcil hayvan sahiplenme platformu. Asenkron veri akışı, Redux Toolkit ile verimli bir şekilde yönetildi."
+      }
+    }
+  },
+  "certificates": {
+    "subtitle": "Profesyonel Yetkinlikler",
+    "titleMain": "",
+    "titleHighlight": "Sertifikalarım",
+    "verified": "Doğrulandı",
+    "items": {
+      "goit": {
+        "title": "FULL-STACK DEVELOPER",
+        "desc": "GoIT'de 675 saatten fazla teorik ders, uygulamalı pratik ve 4 kapsamlı takım projesini barındıran yoğun Full-Stack Geliştirici programını başarıyla tamamladım. Müfredat; modern web standartlarına uygun duyarlı arayüz geliştirme, asenkron JavaScript mimarileri, React & Redux durum yönetimi, Express ve MongoDB tabanlı REST API tasarımı, Swagger dokümantasyonu ve TypeScript entegrasyonu dahil olmak üzere uçtan uca modern yazılım geliştirme iş akışlarını kapsamaktadır."
+      },
+      "freeCodeCamp": {
+        "title": "LEGACY RESPONSIVE WEB DESIGN V8",
+        "desc": "freeCodeCamp tarafından sağlanan ve yaklaşık 300 saatlik pratik uygulamayı temsil eden web tasarım sertifikasyonunu başarıyla tamamladım. Program; semantik HTML5 mimarisi, gelişmiş CSS3 düzen modülleri (Flexbox ve CSS Grid), duyarlı tasarım prensipleri, medya sorguları ve web erişilebilirlik standartları konularında derin bir uzmanlık sağladı ve gerekli tüm temel projelerin başarıyla tamamlanıp teslim edilmesiyle sonuçlandı."
+      }
+    }
+  },
+  "contact": {
+    "subtitle": "İletişime Geçin",
+    "titleMain": "Hadi Yeni Bir Şeyler ",
+    "titleHighlight": "Yaratalım",
+    "description": "Yeni projeleri, yaratıcı fikirleri veya vizyonunuzun bir parçası olma fırsatlarını konuşmaya her zaman açığım. Aklınızda belirli bir proje varsa veya sadece merhaba demek istiyorsanız, bana mesaj göndermekten çekinmeyin!",
+    "info": {
+      "emailLabel": "[ e-posta ]",
+      "locationLabel": "[ konum ]",
+      "locationValue": "İstanbul / Türkiye"
+    },
+    "form": {
+      "nameLabel": "İsim",
+      "namePlaceholder": "Ahmet Yılmaz",
+      "emailLabel": "E-posta Adresi",
+      "emailPlaceholder": "ahmet@ornek.com",
+      "messageLabel": "Mesajınız",
+      "messagePlaceholder": "Bana projenizden bahsedin...",
+      "buttonIdle": "Mesaj Gönder",
+      "buttonLoading": "Gönderiliyor...",
+      "successMessage": "Mesajınız başarıyla gönderildi! Size en kısa sürede dönüş yapacağım.",
+      "errorMessage": "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin."
+    }
+  },
+  "footer": {
+    "bio": "Ölçeklenebilir, modern ve kullanıcı odaklı web uygulamaları geliştirmeye kendini adamış Full-Stack Geliştirici.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "İletişim"
+    },
+    "copyright": "Tüm hakları saklıdır.",
+    "slogan": "TUTKUYLA TASARLANDI & KODLANDI"
+  }
+}

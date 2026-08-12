@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react";
-import { Menu, Palette, Sun, Moon, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) return savedTheme === "dark";
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return true;
-  });
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,35 +16,22 @@ const Header = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    setIsDark((prev) => !prev);
-  };
-
-  // Yeni eklediğimiz PROJECTS bileşeni stratejik sıraya göre eklendi
   const navLinks = [
-    { name: "HOME", href: "#home" },
-    { name: "ABOUT", href: "#about" },
-    { name: "SKILLS", href: "#skills" },
-    { name: "PROJECTS", href: "#projects" },
-    { name: "CERTIFICATES", href: "#certificates" },
-    { name: "CONTACT", href: "#contact" },
+    { name: t("header.nav.home"), href: "#home" },
+    { name: t("header.nav.about"), href: "#about" },
+    { name: t("header.nav.skills"), href: "#skills" },
+    { name: t("header.nav.projects"), href: "#projects" },
+    { name: t("header.nav.certificates"), href: "#certificates" },
+    { name: t("header.nav.contact"), href: "#contact" },
   ];
 
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-5 md:px-12 bg-white/70 text-neutral-900 border-b border-black/10 backdrop-blur-md transition-colors duration-300 dark:bg-black/20 dark:text-white dark:border-white/10">
         <div className="flex items-center gap-2 text-xl font-bold tracking-wider">
-          <span>Kerem Yıldırım</span>
+          <a href="#home" className="select-none cursor-pointer">
+            <span>Kerem Yıldırım</span>
+          </a>
         </div>
 
         <nav className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest">
@@ -64,19 +47,12 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
-          {/* Tema Değiştirme Butonu (cursor-pointer eklendi) */}
-          <button
-            onClick={toggleTheme}
-            aria-label="Toggle Theme"
-            title={isDark ? "Switch to Light Theme" : "Switch to Dark Theme"}
-            className="flex items-center gap-2 p-2 rounded-full text-neutral-700 hover:text-black hover:bg-neutral-200/60 transition-all duration-300 hover:scale-105 active:scale-95 dark:text-white/80 dark:hover:text-white dark:hover:bg-white/10 cursor-pointer"
-          >
-            <Palette size={20} />
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
+        <div className="flex items-center gap-3 md:gap-5">
+          {/* İzole ettiğimiz Aksiyon Bileşenleri (Dil ve Tema) */}
+          <LanguageSwitcher />
+          <ThemeSwitcher />
 
-          {/* Mobil Menü Butonu (cursor-pointer eklendi) */}
+          {/* Mobil Menü Butonu */}
           <button
             className="md:hidden p-2 text-neutral-800 hover:text-black transition-all duration-300 hover:scale-110 dark:text-white/80 dark:hover:text-white cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

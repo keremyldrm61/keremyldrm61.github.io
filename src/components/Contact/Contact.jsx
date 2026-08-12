@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,25 +64,22 @@ const Contact = () => {
         <div className="lg:col-span-5 space-y-6" data-aos="fade-right">
           <div>
             <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
-              Get In Touch
+              {t("contact.subtitle")}
             </span>
             <h2 className="text-4xl md:text-5xl font-light text-neutral-900 dark:text-neutral-100 leading-tight transition-colors duration-300">
-              Let's Create <br />
+              {t("contact.titleMain")} <br />
               <span className="font-medium text-neutral-950 dark:text-white transition-colors duration-300">
-                Something New
+                {t("contact.titleHighlight")}
               </span>
             </h2>
           </div>
           <p className="text-sm md:text-base text-neutral-600 dark:text-neutral-400 font-light leading-relaxed max-w-sm transition-colors duration-300">
-            I'm always open to discussing new projects, creative ideas, or
-            opportunities to be part of your vision. Whether you have a specific
-            project in mind or just want to say hello, feel free to drop a
-            message!
+            {t("contact.description")}
           </p>
           <div className="pt-6 space-y-4 text-sm font-light text-neutral-600 dark:text-neutral-400 transition-colors duration-300">
             <div className="flex items-center space-x-3">
               <span className="text-neutral-500 dark:text-neutral-600 font-mono transition-colors duration-300">
-                [ email ]
+                {t("contact.info.emailLabel")}
               </span>
               <a
                 href="mailto:keremyldrm1670@gmail.com"
@@ -90,10 +90,10 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-3">
               <span className="text-neutral-500 dark:text-neutral-600 font-mono transition-colors duration-300">
-                [ location ]
+                {t("contact.info.locationLabel")}
               </span>
               <span className="text-neutral-800 dark:text-neutral-300 transition-colors duration-300">
-                Istanbul / Turkiye
+                {t("contact.info.locationValue")}
               </span>
             </div>
           </div>
@@ -113,7 +113,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-xs font-mono text-neutral-500 uppercase">
-                  Name
+                  {t("contact.form.nameLabel")}
                 </label>
                 <input
                   type="text"
@@ -124,13 +124,13 @@ const Contact = () => {
                   }
                   disabled={status === "loading"}
                   className="w-full bg-white/50 dark:bg-neutral-900/30 backdrop-blur-md border border-neutral-300 dark:border-neutral-800/80 rounded-xl px-4 py-3 text-sm text-neutral-900 dark:text-neutral-200 placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-neutral-900 dark:focus:border-neutral-600 disabled:opacity-50 transition-colors duration-300"
-                  placeholder="John Doe"
+                  placeholder={t("contact.form.namePlaceholder")}
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-mono text-neutral-500 uppercase">
-                  Email Address
+                  {t("contact.form.emailLabel")}
                 </label>
                 <input
                   type="email"
@@ -141,14 +141,14 @@ const Contact = () => {
                   }
                   disabled={status === "loading"}
                   className="w-full bg-white/50 dark:bg-neutral-900/30 backdrop-blur-md border border-neutral-300 dark:border-neutral-800/80 rounded-xl px-4 py-3 text-sm text-neutral-900 dark:text-neutral-200 placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-neutral-900 dark:focus:border-neutral-600 disabled:opacity-50 transition-colors duration-300"
-                  placeholder="john@example.com"
+                  placeholder={t("contact.form.emailPlaceholder")}
                 />
               </div>
             </div>
 
             <div className="space-y-2">
               <label className="text-xs font-mono text-neutral-500 uppercase">
-                Your Message
+                {t("contact.form.messageLabel")}
               </label>
               <textarea
                 required
@@ -159,7 +159,7 @@ const Contact = () => {
                 }
                 disabled={status === "loading"}
                 className="w-full bg-white/50 dark:bg-neutral-900/30 backdrop-blur-md border border-neutral-300 dark:border-neutral-800/80 rounded-xl px-4 py-3 text-sm text-neutral-900 dark:text-neutral-200 placeholder-neutral-400 dark:placeholder-neutral-600 focus:outline-none focus:border-neutral-900 dark:focus:border-neutral-600 disabled:opacity-50 transition-colors duration-300"
-                placeholder="Tell me about your project..."
+                placeholder={t("contact.form.messagePlaceholder")}
               />
             </div>
 
@@ -191,11 +191,11 @@ const Contact = () => {
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                       ></path>
                     </svg>
-                    <span>Sending...</span>
+                    <span>{t("contact.form.buttonLoading")}</span>
                   </>
                 ) : (
                   <>
-                    <span>Send Message</span>
+                    <span>{t("contact.form.buttonIdle")}</span>
                     <svg
                       className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                       fill="none"
@@ -216,12 +216,12 @@ const Contact = () => {
               {/* Geri Bildirim Mesajları */}
               {status === "success" && (
                 <span className="text-sm text-green-600 dark:text-green-400 font-medium animate-pulse">
-                  Message sent successfully! I'll get back to you soon.
+                  {t("contact.form.successMessage")}
                 </span>
               )}
               {status === "error" && (
                 <span className="text-sm text-red-600 dark:text-red-400 font-medium">
-                  Something went wrong. Please try again later.
+                  {t("contact.form.errorMessage")}
                 </span>
               )}
             </div>

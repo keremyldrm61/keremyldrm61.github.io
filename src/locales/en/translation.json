@@ -1,0 +1,137 @@
+{
+  "header": {
+    "nav": {
+      "home": "HOME",
+      "about": "ABOUT",
+      "skills": "SKILLS",
+      "projects": "PROJECTS",
+      "certificates": "CERTIFICATES",
+      "contact": "CONTACT"
+    }
+  },
+  "hero": {
+    "role": "FULL-STACK DEVELOPER",
+    "greeting": "Hi, I'm",
+    "description": "I am a Full-Stack Developer with hands-on experience as a Team Lead and Scrum Master in collaborative team projects, focusing on both full-stack and frontend development. Utilizing HTML5, CSS3, JavaScript, React, Node.js, MongoDB, and TypeScript, I build end-to-end, responsive, and high-performance web applications.",
+    "contactBtn": "Contact Me"
+  },
+  "about": {
+    "subtitle": "Who I Am",
+    "titleMain": "About",
+    "titleSub": "My Journey",
+    "p1_start": "I am a passionate Full-Stack Web Developer dedicated to building modern, high-performance web applications. My journey in software development is driven by a constant desire to turn complex problems into intuitive, user-centric digital experiences.",
+    "p1_bold": "From scalable backend architectures",
+    "p1_end": "to pixel-perfect frontends, I thrive on crafting complete, end-to-end solutions.",
+    "p2": "Having successfully completed an intensive Full-Stack Developer program at GoIT, I have cultivated strong expertise in technologies like React, JavaScript and TypeScript. Whether acting as a Scrum Master in collaborative agile environments or independently deploying robust applications, my core focus remains on writing clean, maintainable code and delivering impactful results.",
+    "stats": {
+      "exp": "Years Experience",
+      "projects": "Projects Completed",
+      "certs": "Certificates Earned",
+      "commits": "GitHub Commits"
+    }
+  },
+  "skills": {
+    "subtitle": "My Experience",
+    "titleMain": "Skills & ",
+    "titleHighlight": "Technologies",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "subtitle": "Building responsive, high-performance and user-centric interfaces."
+      },
+      "backend": {
+        "title": "Backend & Database",
+        "subtitle": "Developing scalable server-side architectures and secure REST APIs."
+      },
+      "tools": {
+        "title": "Tools & DevOps",
+        "subtitle": "Managing version control, workflow management and modern toolings.",
+        "teamLead": "Scrum / Agile / Team Lead"
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "My Projects",
+    "titleMain": "Featured ",
+    "titleHighlight": "Projects",
+    "items": {
+      "focusFrame": {
+        "role": "Frontend Developer",
+        "desc": "A modern photography portfolio designed to showcase visual work, featuring a minimalist aesthetic and a responsive layout, built entirely with HTML and CSS."
+      },
+      "cinemania": {
+        "role": "Frontend Developer",
+        "desc": "A dynamic platform powered by TMDB API integration, enabling users to discover the latest movies. It features advanced search, year-based filtering, and personalized library management capabilities."
+      },
+      "moneyGuard": {
+        "role": "Scrum Master & Developer",
+        "desc": "A financial management application that enables users to analyze their expenses through visual charts and category-based data. It features secure token-based session management and robust form validation."
+      },
+      "slimMoms": {
+        "role": "Team Lead & Full-Stack Developer",
+        "desc": "A full-stack application that calculates daily calorie requirements based on individual goals and supports diet tracking. As the team lead, I managed the project infrastructure, task allocation, and frontend-backend integration."
+      },
+      "travelTrucks": {
+        "role": "Frontend Developer",
+        "desc": "A campervan rental platform featuring comprehensive filtering, favorites management, and seamless booking workflows. REST API integration was implemented using Axios and MockAPI, with the global state optimized for improved performance and maintainability."
+      },
+      "psychologists": {
+        "role": "Full-Stack Developer",
+        "desc": "A Firebase-powered appointment booking system that allows users to filter experienced psychologists based on their areas of expertise and consultation fees. The application features dynamic theme options and is built with TypeScript to ensure type safety."
+      },
+      "petlove": {
+        "role": "Full-Stack Developer",
+        "desc": "A pet adoption platform that enables users to securely create and manage listings through JWT-based authentication and Cloudinary REST API integration. Asynchronous data flow is efficiently managed using Redux Toolkit."
+      }
+    }
+  },
+  "certificates": {
+    "subtitle": "Professional Credentials",
+    "titleMain": "My ",
+    "titleHighlight": "Certificates",
+    "verified": "Verified",
+    "items": {
+      "goit": {
+        "title": "FULL-STACK DEVELOPER",
+        "desc": "Successfully completed an intensive Full-Stack Developer program at GoIT, encompassing over 675 hours of theoretical lectures, hands-on applications, and 4 comprehensive team projects. The curriculum covers end-to-end modern software development workflows, including responsive interface development aligned with modern web standards, asynchronous JavaScript architectures, React & Redux state management, Express and MongoDB-based REST API design, Swagger documentation, and TypeScript integration."
+      },
+      "freeCodeCamp": {
+        "title": "LEGACY RESPONSIVE WEB DESIGN V8",
+        "desc": "Successfully completed the web design certification provided by freeCodeCamp, representing approximately 300 hours of hands-on practice. The program provided deep expertise in semantic HTML5 architecture, advanced CSS3 layout modules (Flexbox and CSS Grid), responsive design principles, media queries, and web accessibility standards, culminating in the successful completion and submission of all required core projects."
+      }
+    }
+  },
+  "contact": {
+    "subtitle": "Get In Touch",
+    "titleMain": "Let's Create ",
+    "titleHighlight": "Something New",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a specific project in mind or just want to say hello, feel free to drop a message!",
+    "info": {
+      "emailLabel": "[ email ]",
+      "locationLabel": "[ location ]",
+      "locationValue": "Istanbul / Turkiye"
+    },
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "buttonIdle": "Send Message",
+      "buttonLoading": "Sending...",
+      "successMessage": "Message sent successfully! I'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again later."
+    }
+  },
+  "footer": {
+    "bio": "Full-Stack Developer dedicated to building scalable, modern, and user-centric web applications.",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "contact": "Contact"
+    },
+    "copyright": "All rights reserved.",
+    "slogan": "DESIGNED & CODED WITH PASSION"
+  }
+}

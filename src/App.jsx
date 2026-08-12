@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { TechGridPattern } from "./components/TechGridPattern/TechGridPattern";
@@ -12,6 +13,13 @@ import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    // Dil her değiştiğinde HTML tag'indeki lang attribute'unu güncelle
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -25,6 +33,7 @@ const App = () => {
         <TechGridPattern />
       </div>
       <div className="relative z-10">
+        <Header />
         <Hero />
         <About />
         <Skills />

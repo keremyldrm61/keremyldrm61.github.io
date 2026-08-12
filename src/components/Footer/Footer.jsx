@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,8 +17,7 @@ const Footer = () => {
               </span>
             </span>
             <p className="text-xs text-neutral-600 dark:text-neutral-400 font-light text-center md:text-left max-w-sm transition-colors duration-300">
-              Full-Stack Developer dedicated to building scalable, modern, and
-              user-centric web applications.
+              {t("footer.bio")}
             </p>
           </div>
 
@@ -27,7 +29,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
             >
-              GitHub
+              {t("footer.links.github")}
             </a>
             <a
               href="https://www.linkedin.com/in/kerem-yildirim-ky/"
@@ -35,13 +37,13 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
             >
-              LinkedIn
+              {t("footer.links.linkedin")}
             </a>
             <a
               href="#contact"
               className="hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
             >
-              Contact
+              {t("footer.links.contact")}
             </a>
           </div>
         </div>
@@ -49,10 +51,10 @@ const Footer = () => {
         {/* Alt Bilgi (Copyright & Slogan) */}
         <div className="mt-12 pt-6 border-t border-neutral-200 dark:border-neutral-800/50 flex flex-col md:flex-row items-center justify-between gap-4 transition-colors duration-300">
           <p className="text-[11px] font-mono text-neutral-500 dark:text-neutral-500">
-            &copy; {currentYear} All rights reserved.
+            &copy; {currentYear} {t("footer.copyright")}
           </p>
-          <p className="text-[11px] font-mono text-neutral-500 dark:text-neutral-500 tracking-widest">
-            DESIGNED & CODED WITH PASSION
+          <p className="text-[11px] font-mono text-neutral-500 dark:text-neutral-500 tracking-widest uppercase">
+            {t("footer.slogan")}
           </p>
         </div>
       </div>

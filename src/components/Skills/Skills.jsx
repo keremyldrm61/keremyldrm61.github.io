@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation();
 
   const skillCategories = [
     {
-      title: "Frontend Development",
-      subtitle:
-        "Building responsive, high-performance and user-centric interfaces.",
+      title: t("skills.categories.frontend.title"),
+      subtitle: t("skills.categories.frontend.subtitle"),
       skills: [
         { name: "HTML / CSS", level: "90%" },
         { name: "JavaScript", level: "80%" },
@@ -16,9 +17,8 @@ const Skills = () => {
       ],
     },
     {
-      title: "Backend & Database",
-      subtitle:
-        "Developing scalable server-side architectures and secure REST APIs.",
+      title: t("skills.categories.backend.title"),
+      subtitle: t("skills.categories.backend.subtitle"),
       skills: [
         { name: "Node.js / Express.js", level: "60%" },
         { name: "MongoDB / Mongoose", level: "60%" },
@@ -27,14 +27,13 @@ const Skills = () => {
       ],
     },
     {
-      title: "Tools & DevOps",
-      subtitle:
-        "Managing version control, workflow management and modern toolings.",
+      title: t("skills.categories.tools.title"),
+      subtitle: t("skills.categories.tools.subtitle"),
       skills: [
         { name: "Git / GitHub", level: "95%" },
         { name: "Vite / Webpack", level: "85%" },
         { name: "Vercel", level: "95%" },
-        { name: "Scrum / Agile / Team Lead", level: "75%" },
+        { name: t("skills.categories.tools.teamLead"), level: "75%" },
       ],
     },
   ];
@@ -46,12 +45,12 @@ const Skills = () => {
     >
       <div className="mb-16" data-aos="fade-up">
         <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
-          My Experience
+          {t("skills.subtitle")}
         </span>
         <h2 className="text-3xl md:text-4xl font-light text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
-          Skills &{" "}
+          {t("skills.titleMain")}
           <span className="font-medium text-neutral-950 dark:text-white transition-colors duration-300">
-            Technologies
+            {t("skills.titleHighlight")}
           </span>
         </h2>
       </div>
@@ -69,7 +68,7 @@ const Skills = () => {
                 }`}
             >
               <button
-                className="w-full flex flex-col md:flex-row md:items-center justify-between text-left group"
+                className="w-full flex flex-col md:flex-row md:items-center justify-between text-left group cursor-pointer"
                 onClick={() => setActiveIndex(isOpen ? null : index)}
               >
                 <div>

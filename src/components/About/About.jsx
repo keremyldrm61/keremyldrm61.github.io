@@ -1,9 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 const About = () => {
+  const { t } = useTranslation();
+
   const stats = [
-    { number: "2+", label: "Years Experience" },
-    { number: "7+", label: "Projects Completed" },
-    { number: "2+", label: "Certificates Earned" },
-    { number: "500+", label: "GitHub Commits" },
+    { number: "2+", label: t("about.stats.exp") },
+    { number: "7+", label: t("about.stats.projects") },
+    { number: "2+", label: t("about.stats.certs") },
+    { number: "500+", label: t("about.stats.commits") },
   ];
 
   return (
@@ -14,12 +18,12 @@ const About = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         <div className="lg:col-span-4 sticky top-24" data-aos="fade-right">
           <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
-            Who I Am
+            {t("about.subtitle")}
           </span>
           <h2 className="text-4xl md:text-5xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 leading-tight transition-colors duration-300">
-            About <br />
+            {t("about.titleMain")} <br />
             <span className="font-medium text-neutral-950 dark:text-white transition-colors duration-300">
-              My Journey
+              {t("about.titleSub")}
             </span>
           </h2>
         </div>
@@ -29,26 +33,14 @@ const About = () => {
             data-aos="fade-up"
           >
             <p>
-              I am a passionate Full-Stack Web Developer dedicated to building
-              modern, high-performance web applications. My journey in software
-              development is driven by a constant desire to turn complex
-              problems into intuitive, user-centric digital experiences.
+              {t("about.p1_start")}
               <span className="text-neutral-900 dark:text-neutral-200 font-medium transition-colors duration-300">
                 {" "}
-                From scalable backend architectures
+                {t("about.p1_bold")}
               </span>{" "}
-              to pixel-perfect frontends, I thrive on crafting complete,
-              end-to-end solutions.
+              {t("about.p1_end")}
             </p>
-            <p>
-              Having successfully completed an intensive Full-Stack Developer
-              program at GoIT, I have cultivated strong expertise in
-              technologies like React, JavaScript and TypeScript. Whether acting
-              as a Scrum Master in collaborative agile environments or
-              independently deploying robust applications, my core focus remains
-              on writing clean, maintainable code and delivering impactful
-              results.
-            </p>
+            <p>{t("about.p2")}</p>
           </div>
           <div
             className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-neutral-300 dark:border-neutral-800 transition-colors duration-300"

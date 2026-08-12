@@ -1,11 +1,15 @@
+import { useTranslation } from "react-i18next";
+
 const Certificates = () => {
+  const { t } = useTranslation();
+
   const certificates = [
     {
       id: 1,
-      title: "FULL-STACK DEVELOPER",
+      title: t("certificates.items.goit.title"),
       issuer: "GoIT",
       date: 2026,
-      desc: "Successfully completed an intensive Full-Stack Developer program at GoIT, encompassing over 675 hours of theoretical lectures, hands-on applications, and 4 comprehensive team projects. The curriculum covers end-to-end modern software development workflows, including responsive interface development aligned with modern web standards, asynchronous JavaScript architectures, React & Redux state management, Express and MongoDB-based REST API design, Swagger documentation, and TypeScript integration.",
+      desc: t("certificates.items.goit.desc"),
       skills: [
         "HTML / CSS",
         "JavaScript",
@@ -22,10 +26,10 @@ const Certificates = () => {
     },
     {
       id: 2,
-      title: "LEGACY RESPONSIVE WEB DESIGN V8",
+      title: t("certificates.items.freeCodeCamp.title"),
       issuer: "freeCodeCamp",
       date: 2026,
-      desc: "Successfully completed the web design certification provided by freeCodeCamp, representing approximately 300 hours of hands-on practice. The program provided deep expertise in semantic HTML5 architecture, advanced CSS3 layout modules (Flexbox and CSS Grid), responsive design principles, media queries, and web accessibility standards, culminating in the successful completion and submission of all required core projects.",
+      desc: t("certificates.items.freeCodeCamp.desc"),
       skills: [
         "HTML5",
         "CSS3",
@@ -45,12 +49,12 @@ const Certificates = () => {
     >
       <div className="text-center mb-16" data-aos="fade-up">
         <span className="text-xs font-medium tracking-widest text-neutral-500 uppercase block mb-2">
-          Achieved Milestones
+          {t("certificates.subtitle")}
         </span>
         <h2 className="text-3xl md:text-4xl font-light tracking-tight text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
-          My{" "}
+          {t("certificates.titleMain")}
           <span className="font-medium text-neutral-950 dark:text-white">
-            Certificates
+            {t("certificates.titleHighlight")}
           </span>
         </h2>
       </div>
@@ -69,7 +73,7 @@ const Certificates = () => {
                   {cert.date}
                 </span>
                 <span className="px-2.5 py-0.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 text-[10px] uppercase font-semibold rounded-full border border-neutral-200 dark:border-neutral-700/50 transition-colors duration-300">
-                  Verified
+                  {t("certificates.verified")}
                 </span>
               </div>
               <h3 className="text-xl font-medium text-neutral-900 dark:text-neutral-100 mb-2 group-hover:text-black dark:group-hover:text-white transition-colors duration-200">
